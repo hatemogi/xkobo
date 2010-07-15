@@ -1,0 +1,30 @@
+V1.10
+	* fixed an endianness problem of score files
+	* secure score files
+V1.9
+	* take measure against system calls interrupted by SIGALRM
+	* '-hiscores' option
+	* bonus ships
+V1.8
+	* add close() in file.C
+V1.7
+	* enabled to move on diagonals using the numeric keypad
+V1.6
+	* support for Solaris 2
+V1.5
+	* ceased to use semaphores
+        * fixed a strange usage of setitimer
+        * '-wait' option
+V1.4
+	* '-cheat' option
+	* enabled to play using a mouse
+	* enabled to compile with gcc-2.7.0
+V1.3
+	* fixed a bug about '-fit' option
+	* enabled to select a stage to play
+V1.2
+	* support for TrueColor X server
+	* '-fit' option
+	* '-doublesize' option
+V1.1 
+	* first uploaded to tsx-11.mit.edu

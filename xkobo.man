@@ -1,0 +1,54 @@
+.TH XKOBO 1 "29 September 1995"
+.SH NAME
+xkobo - a video-oriented game for X
+.SH SYNOPSIS
+.B xkobo
+[
+.I options
+]
+.SH DESCRIPTION
+.B Xkobo
+is a single player action game. The play is quite simple. Your object is
+to destroy all the fortresses.  You can control your ship by pressing
+the cursor keys (or moving the mouse cursor), and shot beams by pressing
+the SHIFT key (or the left mouse button). The game can be paused by 
+pressing 's' (or the right mouse button). 
+
+.SH OPTIONS
+.TP 3
+.BI \-display " displayname "
+This option specifies the name of the X server to use.
+.TP 3
+.B \-fit
+This option causes \fBxkobo\fP to use the default colormap.
+Without this option, \fBxkobo\fP uses a private colormap.
+.TP 3
+.BI \-wait " value "
+This option specifies the speed of the game. 
+The default value is 30(msec).
+.TP 3
+.B \-doublesize
+This option causes \fBxkobo\fP to enlarge the size of the window. 
+But it costs HUGE memory.
+.TP 3
+.B \-fast
+This option causes \fBxkobo\fP to use a faster algorithm.
+But it costs much memory.
+.TP 3
+.B \-cheat
+Cheat mode. It allows any level to be played, does not update score file.
+.TP 3
+.B \-hiscores
+Print the high score table to standard out, and exit.
+
+.SH FILES
+/usr/local/games/xkobo-scores/*  -  records of the game.
+
+.SH AUTHOR
+Akira Higuchi (a-higuti@math.hokudai.ac.jp)
+
+.SH COPYRIGHT
+Copyright (c) 1995,1996  Akira Higuchi 
+
+\fBXkobo\fP is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License.
