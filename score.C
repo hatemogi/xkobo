@@ -90,7 +90,7 @@ void _scorefile::init(int *highscorep, int *stagep)
         strcpy(login_name, pw->pw_name);
     }
     sprintf(save_path, "%s/%u", XKOBO_SCORE_DIR, getuid());
-    if ((i=load_block(save_path, &tbl, sizeof(tbl))) < 0){
+    if ((i=load_block(save_path, (char*)&tbl, sizeof(tbl))) < 0){
         fprintf(stderr, "xkobo : (warning) can't read the score-file\n");
     }
     (*highscorep) = tbl.score;
@@ -105,7 +105,7 @@ void _scorefile::record(int new_score, int stage)
     tbl.score = 0;
     tbl.scene = 0;
     strcpy(tbl.name, "foo");
-    (void)load_block(save_path, &tbl, sizeof(tbl));
+    (void)load_block(save_path, (char *)&tbl, sizeof(tbl));
     if (new_score > tbl.score){
         tbl.score = new_score;
         strcpy(tbl.name, login_name);
@@ -117,7 +117,7 @@ void _scorefile::record(int new_score, int stage)
         write = 1;
     }
     if (write){
-        if (save_block(save_path, &tbl, sizeof(tbl)) < 0){
+        if (save_block(save_path, (char *)&tbl, sizeof(tbl)) < 0){
             fprintf(stderr, "xkobo : (warning) "
                             "can't update the score-file\n");
         }
@@ -146,7 +146,7 @@ void _scorefile::show_high_scores(int to_stdout)
         sprintf(path, "%s/%s", XKOBO_SCORE_DIR, direntp->d_name);
         if (stat(path, &st_buffer)) continue;
         if (!S_ISREG(st_buffer.st_mode)) continue;
-        if (load_block(path, &tbl[i], sizeof(s_table)) < 0) continue;
+        if (load_block(path, (char *)&tbl[i], sizeof(s_table)) < 0) continue;
         if ((++i) >= SCORE_SAVE_MAX) break;
     }
     closedir(dp);

@@ -32,17 +32,17 @@ extern "C"{
 int load_block(char *file_name, void *t, int len) 
 {
     int i, fd, ret = 0;
-    
+    char *p = (char *)t;
     fd = open(file_name, O_RDONLY, 0);
     if (fd == -1) return -1;
     do {
-        i = read(fd, t, len);
+        i = read(fd, p, len);
         if ((i < 0) && (errno == EINTR)) continue;
         if (i <= 0){
             ret = -2;
             break;
         }
-        t += i;
+        p += i;
         len -= i;
     } while (len > 0);
     for (;;){
@@ -58,17 +58,17 @@ int load_block(char *file_name, void *t, int len)
 int save_block(char *file_name, void *t, int len) 
 {
     int i, fd, ret = 0;
-     
+    char *p = (char *)t;
     fd = open(file_name, O_CREAT|O_WRONLY, 0644);
     if (fd == -1) return -1;
     do {
-        i = write(fd, t, len);
+        i = write(fd, p, len);
         if ((i < 0) && (errno == EINTR)) continue;
         if (i <= 0){
             ret = -2;
             break;
         }
-        t += i;
+        p += i;
         len -= i;
     } while (len > 0);
     for (;;){

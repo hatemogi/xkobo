@@ -51,7 +51,7 @@ int             cheat_mode;
 
 static int      signal_delivered = 1;
 
-static void sig_handle(...)
+static void sig_handle(int)
 {
     signal_delivered = 1;
 }

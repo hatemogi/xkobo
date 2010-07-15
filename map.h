@@ -38,10 +38,10 @@
 #define HIT_MASK       (CORE | U_MASK | R_MASK | D_MASK | L_MASK)
 
 class _map{
-    const int sx_log2 = MAP_SIZEX_LOG2;
-    const int sy_log2 = MAP_SIZEY_LOG2;
-    const int sx = 1 << sx_log2;
-    const int sy = 1 << sy_log2;
+    const static int sx_log2 = MAP_SIZEX_LOG2;
+    const static int sy_log2 = MAP_SIZEY_LOG2;
+    const static int sx = 1 << sx_log2;
+    const static int sy = 1 << sy_log2;
     int sitex[SITE_MAX];
     int sitey[SITE_MAX];
     int site_max;
