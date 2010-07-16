@@ -1,0 +1,6 @@
+pygments: true
+source: src
+destination: site
+lsi: false
+markdown: rdiscount
+permalink: /:year-:month-:day/:title.html
