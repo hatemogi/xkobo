@@ -6,7 +6,8 @@ WAIT_MSEC   = 30
 SHIPS       = 5
 
 #  RECORDS  
-HSCORE_DIR  = /usr/local/games/xkobo-scores
+HSCORE_DIR  = Library/Preferences/com.hatemogi.xkobo/scores
+# /usr/local/games/xkobo-scores
 
 .SUFFIXES: .C $(SUFFIXES)
 
@@ -22,7 +23,7 @@ SRCS = $(SRCS1) $(SRCS2)
 DEFINES = -DWAIT_MSEC=$(WAIT_MSEC) -DSHIPS=$(SHIPS) \
           -DXKOBO_SCORE_DIR=\"$(HSCORE_DIR)\"
 
-CFLAGS=$(DEFINES) 
+CFLAGS=$(DEFINES)
 CCOPTIONS = #-Wall -g -pg
 
 LOCAL_LIBRARIES = -L/usr/X11/lib -lX11

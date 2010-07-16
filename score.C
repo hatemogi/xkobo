@@ -89,9 +89,9 @@ void _scorefile::init(int *highscorep, int *stagep)
     else {
         strcpy(login_name, pw->pw_name);
     }
-    sprintf(save_path, "%s/%u", XKOBO_SCORE_DIR, getuid());
+    sprintf(save_path, "%s/%s/%u", getenv("HOME"), XKOBO_SCORE_DIR, getuid());
     if ((i=load_block(save_path, (char*)&tbl, sizeof(tbl))) < 0){
-        fprintf(stderr, "xkobo : (warning) can't read the score-file\n");
+        fprintf(stderr, "xkobo : (warning) can't read the score-file from %s\n", save_path);
     }
     (*highscorep) = tbl.score;
     (*stagep) = tbl.scene;
@@ -139,11 +139,12 @@ void _scorefile::show_high_scores(int to_stdout)
     struct dirent *direntp;
     DIR           *dp;
     struct stat st_buffer;
-    dp = opendir(XKOBO_SCORE_DIR);
+    sprintf(path, "%s/%s", getenv("HOME"), XKOBO_SCORE_DIR);
+    dp = opendir(path);
     if (dp == NULL) return;
     i = 0;
     while ((direntp = readdir(dp)) != NULL){
-        sprintf(path, "%s/%s", XKOBO_SCORE_DIR, direntp->d_name);
+        sprintf(path, "%s/%s/%s", getenv("HOME"), XKOBO_SCORE_DIR, direntp->d_name);
         if (stat(path, &st_buffer)) continue;
         if (!S_ISREG(st_buffer.st_mode)) continue;
         if (load_block(path, (char *)&tbl[i], sizeof(s_table)) < 0) continue;
