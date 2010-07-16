@@ -1,4 +1,3 @@
-
 #  SPEED OF THE GAME  
 WAIT_MSEC   = 30
 
@@ -7,7 +6,6 @@ SHIPS       = 5
 
 #  RECORDS  
 HSCORE_DIR  = Library/Preferences/com.hatemogi.xkobo/scores
-# /usr/local/games/xkobo-scores
 
 .SUFFIXES: .C $(SUFFIXES)
 
