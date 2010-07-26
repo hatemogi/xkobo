@@ -1,22 +1,8 @@
-# XKOBO
+# XKOBO for Mac OS X 
 
-XKOBO is a single player action game which is published in 1996. This project makes the game be compiled on MacOS X Snow Leopard.
+Xkobo is a simple open-source game developed by Akira Higuchi, in 1997. It was originally for X Window system. So I thought that it would have been easily playerble on my Mac because the OS X has X Window system as built-in. However, I've noticed that it had few difficulties to be compiled. So I've patched few lines of code to have it compiled, and packaged it as an application. I hope it is useful to other Mac OS X users as well. Enjoy!
 
-# Description
-
-
-# Requirement
-
-Though original Xkobo runs on UNIX (BSD, Linux, ...) platforms, This project is focused on MacOS X only. 
-
-This version of Xkobo requires:
-
-* Mac OS X v10.5 Leopard or later
-
-To build the package, you need: 
-
-* Xcode Developer Tools
-
+Visit http://osxkobo.appspot.com for more info.
 
 # License
 

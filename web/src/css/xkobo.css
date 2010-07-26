@@ -1,4 +1,18 @@
-.footer {
-    width: 100%;
-    text-align: center;
+h1 {
+    font-size: 1.3em;
+}
+
+#content {
+    align: center;
+    width: 640px;
+    margin: 0 auto; 
+    position: relative;
+}
+
+#footer {
+    width: 700px;
+    text-align: right;
+    border-top: 1px solid black;
+
+    margin: 3em auto;
 }
