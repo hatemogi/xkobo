@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>xkobo</string>
+	<string>xkobo2</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
@@ -24,7 +24,7 @@
 		<string>10.6</string>
 	</dict>
 	<key>LSRequiresCarbon</key>
-	<false/>
+	<true/>
 	<key>WindowState</key>
 	<dict>
 		<key>dividerCollapsed</key>
@@ -36,9 +36,9 @@
 		<key>positionOfDivider</key>
 		<real>333</real>
 		<key>savedFrame</key>
-		<string>295 229 602 597 0 0 1920 1178 </string>
+		<string>59 274 602 597 0 0 1920 1178 </string>
 		<key>selectedTabView</key>
-		<string>event log</string>
+		<string>result</string>
 	</dict>
 </dict>
 </plist>
