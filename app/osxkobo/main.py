@@ -16,11 +16,22 @@
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
-
+import os
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write('Hello world!')
+        filename = 'index.html'
+        for i in self.request.accept_language.best_matches('en'):
+            if i == 'ko':
+                filename = 'index.ko.html'
+                break
+            if i == 'ja':
+                filename = 'index.ja.html'
+                break
+#        filename = os.path.join(os.path.split(__file__)[0], 'site', filename) 
+        f = open(filename, 'r')
+        self.response.out.write(f.read())
+        f.close
 
 
 def main():

@@ -5,16 +5,11 @@ api_version: 1
 
 handlers:
 - url: /
-  static_files: site/index.html
-  upload: site/index.html
+  script: main.py
 
 - url: /(.*)
   static_files: site/\1
   upload: site/(.*)
 
-- url: .*
-  script: main.py
-
-  
 - url: /.*
   script: not_found.py
