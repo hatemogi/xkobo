@@ -1,6 +1,6 @@
 # XKOBO for Mac OS X 
 
-Xkobo is a simple open-source game developed by Akira Higuchi, in 1997. It was originally for X Window system. So I thought that it would have been easily playerble on my Mac because the OS X has X Window system as built-in. However, I've noticed that it had few difficulties to be compiled. So I've patched few lines of code to have it compiled, and packaged it as an application. I hope it is useful to other Mac OS X users as well. Enjoy!
+Xkobo is a simple open-source game developed by Akira Higuchi, in 1997. It was originally for X Window system. So I thought that it would have been easily playerble on my Mac because the OS X has X Window system as built-in. However, I've noticed that it had few difficulties to be compiled. So I've patched few lines of code to have it compiled, and packaged it as an application. I hope it is useful to other Mac OS X users as well. Go and enjoy this in your mac . Hurry up!
 
 Visit http://osxkobo.appspot.com for more info.
 
